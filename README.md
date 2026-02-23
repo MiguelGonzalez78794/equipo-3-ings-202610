@@ -1,54 +1,47 @@
 # Proyecto – Fase de Análisis
 
-## Descripción
+---
 
-Este repositorio contiene la fase de análisis del proyecto desarrollado para el curso de Ingeniería de Software.  
-En esta etapa se define la estructura inicial de documentación y la organización de los requisitos del sistema.
+## Tabla de Navegación
 
-El objetivo de esta fase es establecer una base clara para el desarrollo posterior del proyecto.
+| Archivo / Carpeta | Descripción |
+|---|---|
+| [README.md](./README.md) | Descripción general del repositorio y navegación |
+| [index.md](./doc/index.md) | Descripción del problema del proyecto, público objetivo y navegación |
+| [index.md](./doc/analysis/index.md) | Visión general de la fase de análisis |
+| [requirements-fn.md](./doc/analysis/requirements-fn.md) | Requisitos funcionales |
+| [requirements-nfn.md](./doc/analysis/requirements-nfn.md) | Requisitos no funcionales |
 
 ---
 
-## Equipo de Trabajo
+## Descripción del Repositorio
 
-| Nombre | Rol |
-|--------|------|
-| Santiago Barrientos | --- |
-| Miguel Angel Gonzales | --- |
-| Juan Pablo Gonzales | --- |
-| Juan Correa | --- |
+Este repositorio contiene la documentación y el análisis de una **extensión web y móvil** diseñada para apoyar a los **estudiantes nuevos de la Universidad Pontificia Bolivariana (UPB)**.
 
----
+El proyecto se centra en facilitar el proceso de adaptación de los estudiantes de primer ingreso mediante la centralización de herramientas e información útil, tales como:
+- Un mapa del campus para la navegación.
+- Un foro de ayuda para resolver dudas estudiantiles.
+- Horarios de asesorías y tutorías.
 
-## Estructura del Repositorio
-
-El proyecto está organizado de la siguiente manera:
-
-```
-/
-│── README.md
-└── doc/
-    │── index.md
-    └── analysis/
-        │── index.md
-        │── requirements-fn.md
-        │── requirements-nfn.md
-```
+El repositorio incluye la documentación de la fase de análisis, los requisitos funcionales y no funcionales, y la estructura de navegación del proyecto.
 
 ---
 
-## Navegación
+## Documentación
 
-- [Documentación general](doc/index.md)
-- [Análisis del proyecto](doc/analysis/index.md)
-- [Requisitos funcionales](doc/analysis/requirements-fn.md)
-- [Requisitos no funcionales](doc/analysis/requirements-nfn.md)
+Toda la información del proyecto se estructura dentro del directorio `doc`, el cual se mantiene en constante actualización conforme avanza el desarrollo.
 
+Dentro de esta carpeta se encuentra el archivo `index.md`, que presenta una visión general del proyecto y proporciona una tabla de navegación que facilita el acceso a las distintas secciones y documentos principales.
 
 ---
 
-## Ramas del Proyecto
+## Equipo 
 
-- `main`: rama principal del repositorio
-- `development`: rama de integración
-- `feature/analysis-1`: rama para la fase de desarrollo
+**`equipo-3-ing-202610`**
+
+## Integrantes del Equipo
+
+- Juan Esteban Correa Castro  
+- Miguel Angel Gonzalez Ibarra  
+- Juan Pablo Gonzalez Zabala  
+- Santiago Londoño Barrientos  

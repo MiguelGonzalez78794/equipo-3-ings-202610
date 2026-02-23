@@ -1,38 +1,39 @@
-# Documentación del Proyecto
-
-## Introducción
-
-Este proyecto consiste en el desarrollo de una plataforma web orientada a estudiantes de primer semestre (primíparos), con el objetivo de facilitar su adaptación al entorno universitario.
-
-La solución propuesta es un sistema que integra un mapa interactivo del campus, permitiendo la ubicación de aulas, edificios y servicios institucionales.
+# Documentación
 
 ---
 
-## Problema
+## Tabla de navegación
 
-Los estudiantes que ingresan por primera vez a la universidad suelen presentar dificultades para ubicarse dentro del campus. 
-
-Entre los principales problemas identificados se encuentran:
-
-- Desconocimiento de la ubicación de aulas y edificios.
-- Dificultad para encontrar oficinas administrativas.
-- Retrasos en clases por falta de orientación.
-- Desinformación sobre servicios disponibles.
+| Sección | Descripción |
+|---|---|
+| [Análisis](./analysis/index.md) | Requisitos funcionales y no funcionales, y navegación interna |
 
 ---
 
-## Público Objetivo
+## ¿Qué problema soluciona el proyecto?
 
-El sistema está dirigido principalmente a:
+Cuando un estudiante nuevo (primíparo) ingresa a la UPB, con frecuencia pierde tiempo buscando información básica y repetitiva, como:
+- ¿Dónde se encuentra un edificio u oficina específica?
+- ¿Cómo llegar a un salón de clase o a un servicio universitario?
+- ¿Dónde puedo hacer preguntas comunes sobre materias o trámites administrativos?
+- ¿Cuáles son los horarios de asesorías o tutorías?
+- ¿Qué servicios ofrece la universidad y cómo se utilizan?
 
-- Estudiantes de primer semestre.
-- Estudiantes nuevos por transferencia.
-- Visitantes que requieren orientación dentro del campus.
+**Nuestro proyecto** es una **extensión web y móvil** dirigida a los **estudiantes nuevos de la Universidad Pontificia Bolivariana (UPB)**, que centraliza herramientas de apoyo práctico en una sola plataforma:
+- **Mapa de la universidad** para ayudar a los estudiantes a ubicar edificios y servicios clave.
+- **Foro de ayuda** donde los estudiantes pueden hacer y responder preguntas.
+- **Horarios de asesorías y tutorías** para consulta rápida.
+
+El objetivo principal es reducir la confusión, la desinformación y la pérdida de tiempo durante las primeras semanas de universidad, mejorando la experiencia de adaptación del estudiante.
 
 ---
 
-## Navegación
+## Público objetivo
 
-Para consultar los requisitos del sistema, dirigirse a:
+**Usuarios primarios**
+- **Estudiantes primíparos de la UPB (primer semestre)**.
+- Estudiantes recién admitidos o aspirantes durante el proceso de inducción.
 
-- [Análisis del proyecto](analysis/index.md)
+**Usuarios secundarios**
+- Mentores estudiantiles, tutores o monitores que participan en el foro de ayuda.
+- Personal académico o administrativo (si se integra información oficial en la plataforma).

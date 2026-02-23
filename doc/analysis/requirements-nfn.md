@@ -28,7 +28,41 @@ El sistema deberá ser accesible desde los navegadores más utilizados (Google C
 
 ---
 
-## 5. Seguridad
+## 5.Mantenibilidad 
+**Prioridad:** Alta 
+El sistema debe estar desarrollado de forma modular, permitiendo realizar actualizaciones y correcciones sin afectar el funcionamiento general.
+
+---
+
+## 6. Confiabilidad
+**Prioridad:** Alta  
+
+El sistema debe garantizar que la información mostrada (mapas, horarios, respuestas del chatbot) sea consistente y no presente errores críticos.
+
+---
+
+## 7. Seguridad
+**Prioridad:** Alta  
+
+El sistema deberá proteger la información de los usuarios mediante mecanismos de autenticación y control de acceso, evitando el acceso no autorizado a datos personales y a funcionalidades internas de la plataforma.
+
+---
+
+## 8. Escalabilidad
 **Prioridad:** Media  
 
-En caso de implementar autenticación de usuarios, el sistema deberá proteger la información personal mediante protocolos seguros (HTTPS) y almacenamiento cifrado de contraseñas.
+La plataforma deberá ser capaz de soportar un aumento progresivo en el número de usuarios concurrentes, especialmente durante el inicio del semestre, sin degradar significativamente su rendimiento.
+
+---
+
+## 9. Accesibilidad
+**Prioridad:** Alta  
+
+El sistema deberá cumplir principios básicos de accesibilidad web, como contraste adecuado, textos legibles y compatibilidad con lectores de pantalla, para garantizar su uso por estudiantes con diferentes capacidades.
+
+---
+
+## 10. Portabilidad
+**Prioridad:** Media  
+
+La aplicación deberá poder desplegarse en distintos entornos de servidor o infraestructura en la nube sin requerir cambios significativos en el código fuente.

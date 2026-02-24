@@ -102,7 +102,7 @@ A continuación, se presentan los requisitos funcionales iniciales considerados 
 
 ## **F-10. Chat rápido con el mentor (2)** 💬
 
-**Prioridad:** P(2)
+**Prioridad:** P(1)
 
 **Descripción:** Como usuario, sería conveniente que tenga una forma de contactar a mi mentor de forma rápida mientras me encuentro usando la aplicación en caso de requerirlo.
 
@@ -151,7 +151,7 @@ A continuación, se presentan los requisitos funcionales iniciales considerados 
 
 ## **F-13. Preguntas frecuentes de primiparos y no primiparos (1)** ❓
 
-**Prioridad:** P(2)
+**Prioridad:** P(1)
 
 
 
@@ -232,7 +232,7 @@ A continuación, se presentan los requisitos funcionales iniciales considerados 
 
 * F-16.1. Conocer un nuevo lugar (2)    
 
-    **Prioridad:** P(3)
+    **Prioridad:** P(1)
     *   Escenario (Recomendado):
         *   Dado que el usuario se encuentra en "Conoce la Universidad"
         *   Cuando este hace click en "Recomendado de hoy"
@@ -250,7 +250,7 @@ A continuación, se presentan los requisitos funcionales iniciales considerados 
 
 * F-16.2. Guiar al usuario con el mapa (3)
 
-    **Prioridad:** P(0)
+    **Prioridad:** P(2)
     *   Escenario (Encontrar lugar):
         *   Dado que el usuario se encuentra en "Conoce la Universidad" y tiene información de un lugar
         *   Cuando este hace click en el botón de "Encontrar"
@@ -258,7 +258,7 @@ A continuación, se presentan los requisitos funcionales iniciales considerados 
 
 * F-16.3. Recompensar al usuario por conocer la universidad (3)
 
-    **Prioridad:** P(0)
+    **Prioridad:** P(3)
     *   Escenario (El usuario finaliza las actividades):
         *   Dado que el usuario se encuentra en "Conoce la Universidad" y tiene información de un lugar
         *   Cuando este finaliza la última actividad disponible
@@ -352,5 +352,6 @@ A continuación, se presentan los requisitos funcionales iniciales considerados 
     *   Dado que el usuario se encuentra en "Emprendimientos"
     *   Cuando este hace click en la sección de un emprendimiento
     *   Entonces el aplicativo muestra la información completa de este, incluidas imágenes y texto
+
 
 

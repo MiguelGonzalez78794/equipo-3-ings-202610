@@ -18,7 +18,7 @@
 
 El proyecto está organizado de la siguiente manera:
 
-```
+---
 /
 │── README.md
 └── doc/
@@ -28,7 +28,7 @@ El proyecto está organizado de la siguiente manera:
         │── requirements-fn.md
         │── requirements-nfn.md
 
-```
+---
 ## Descripción del Repositorio
 
 Este repositorio contiene la documentación y el análisis de una **extensión web y móvil** diseñada para apoyar a los **estudiantes nuevos de la Universidad Pontificia Bolivariana (UPB)**.

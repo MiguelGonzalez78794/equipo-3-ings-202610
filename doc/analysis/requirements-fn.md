@@ -36,7 +36,7 @@ A continuación, se presentan los requisitos funcionales iniciales considerados 
 
 **Descripción:** Como usuario, me gustaría acceder a un mapa de la universidad e interactuar con este para consultar la información de cada ubicación relevante.
 
-### F-03.1. Mapa con ubicación en tiempo real (3) 📍
+### RF-1. Mapa con ubicación en tiempo real (3) 📍
 **Prioridad:** P(0)
 
 * **Escenario (Uso de mapa):**
@@ -44,7 +44,7 @@ A continuación, se presentan los requisitos funcionales iniciales considerados 
     * Cuando el usuario carga el mapa.
     * Entonces el aplicativo presenta su ubicación actual sobre el plano del campus.
 
-### F-03.2. Botones de información en el mapa (2) ℹ️
+### RF-2. Botones de información en el mapa (2) ℹ️
 **Prioridad:** P(0)
 
 * **Escenario (Uso de funcionalidades):**
@@ -134,7 +134,7 @@ A continuación, se presentan los requisitos funcionales iniciales considerados 
 
 
 
-## **F-12. Accesos directos institucionales (0)** ⚡
+## **F-12. Accesos directos institucionales (1)** ⚡
 
 **Prioridad:** P(3)
 
@@ -352,6 +352,7 @@ A continuación, se presentan los requisitos funcionales iniciales considerados 
     *   Dado que el usuario se encuentra en "Emprendimientos"
     *   Cuando este hace click en la sección de un emprendimiento
     *   Entonces el aplicativo muestra la información completa de este, incluidas imágenes y texto
+
 
 
 

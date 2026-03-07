@@ -13,4 +13,3 @@ En esta carpeta se encuentran los documentos relacionados con la definición de 
 
 ---
 
-Esta sección será desarrollada progresivamente durante la fase de análisis.

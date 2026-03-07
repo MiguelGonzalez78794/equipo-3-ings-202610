@@ -1,4 +1,4 @@
-# Proyecto – Fase de Análisis
+# Proyecto – Asistente General Estudiantil (AGE)
 
 ---
 

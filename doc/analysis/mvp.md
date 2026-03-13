@@ -6,6 +6,7 @@
 * (2 Puntos) F-07. Recuperación de contraseña
 * (2 Puntos) F-10. Chat rápido con el mentor
 * (1 Punto)  F-13. Preguntas frecuentes de primiparos y no primiparos
+* (8 Puntos) F-14. Barra de búsqueda con sistema de etiquetas
 * (5 Puntos) F-16. Actividades que permiten conocer la universidad
 
 # 👓 Requisitos No Funcionales
@@ -17,4 +18,4 @@
 
 ---
 
-## 🕹️ Total Puntos: 28
+## 🕹️ Total Puntos: 36

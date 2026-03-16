@@ -20,7 +20,7 @@ En este documento se presentan los diagramas UML que ilustran el comportamiento 
 <img src="images/DiagramaDeUsoLogIn.png" alt="Cliente se Logea" width="600"/>
 
 ### 3.2 Diagrama de Secuencia - Caso de uso 2: Consulta del mapa
-<img src="images/DiagramaDeUsoMapa.png" alt="Cliente se registra como productor" width="600"/>
+<img src="images/DiagramaDeUsoMapa.png" alt="Cliente usa el mapa" width="600"/>
 
 ---
 

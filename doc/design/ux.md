@@ -136,4 +136,4 @@
 
 ## 🔗 Link de Acceso - Wireframes
 
-[Figma - Wireframes (PC y Mobile](https://www.figma.com/design/uU1xusjYlsp34ZTHMMDy0T/Untitled?node-id=0-1&t=SiPErbEfJ7NML3Xz-1)
+[Figma - Wireframes (PC y Mobile)](https://www.figma.com/design/uU1xusjYlsp34ZTHMMDy0T/Untitled?node-id=0-1&t=SiPErbEfJ7NML3Xz-1)

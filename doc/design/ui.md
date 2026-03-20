@@ -22,11 +22,15 @@
 
 ### 🖥️ /buscar
 
-![buscarpc](https://cdn.discordapp.com/attachments/1117641476998959219/1483681047664136392/image.png?ex=69bb7927&is=69ba27a7&hm=0f3001481ae3cb574ca8be4657759397fe1b280955c4621e038f0757b8f815ac&)
+![buscarpc](https://media.discordapp.net/attachments/1117641476998959219/1483681047664136392/image.png?ex=69bd7367&is=69bc21e7&hm=d8c8d12061b92a67347edb396a30c3421ab006e00deca5e848ecd91addff33ea&=&format=webp&quality=lossless&width=367&height=350)
 
 ### 🖥️ /actividades
 
 ![actividadespc](https://cdn.discordapp.com/attachments/1117641476998959219/1483681366817374309/image.png?ex=69bb7973&is=69ba27f3&hm=5bfefbd7cb43c362d0db8e72041de92db24bb4726f8cc3c6e13018c60a0e622e&)
+
+#### Click en una Actividad
+
+![actividadesclickpc](https://media.discordapp.net/attachments/1117641476998959219/1483681419002773566/image.png?ex=69bd73bf&is=69bc223f&hm=cfbbf737c0809eb114aeeb857feaed8ebc420d0d5c8b8ed44b770b8d173bc41d&=&format=webp&quality=lossless&width=445&height=656)
 
 ### 🖥️ /mapa
 
@@ -47,6 +51,10 @@
 ### 🖥️ /perfil
 
 ![perfilpc](https://cdn.discordapp.com/attachments/1117641476998959219/1483681143445262467/image.png?ex=69bb793e&is=69ba27be&hm=e96cca8055327090dc3fd15a516aa3ea0a62ef16050f6d380ff4c0269bca3997&)
+
+#### 🖥️ /menu
+
+![menu](https://media.discordapp.net/attachments/1117641476998959219/1483681199670034432/image.png?ex=69bd738b&is=69bc220b&hm=20b5c0eaffaa9de3afa22b37cffdaabac05bfbfa1901ea1bce0cc7cddb112d87&=&format=webp&quality=lossless)
 
 
 # 📱 Wireframes - Mobile
@@ -77,7 +85,11 @@
 
 ### 📱 /actividades
 
-![actividadesm](https://cdn.discordapp.com/attachments/1483682269184004278/1483682589624766584/image.png?ex=69bb7a96&is=69ba2916&hm=ea9b6b3319b9e9182d84089c6fadd7292b0407e10b8dd6b4d09b0c5a3c72a7fc&)
+![actividades](https://media.discordapp.net/attachments/1117641476998959219/1483681366817374309/image.png?ex=69bd73b3&is=69bc2233&hm=a7ed8af99ff7153e08e77739d7d44883f20901c72e3bec25d0d16f2cce7d2f7b&=&format=webp&quality=lossless&width=448&height=656)
+
+#### Click en una actividad
+
+![actmobile](https://media.discordapp.net/attachments/1483682269184004278/1483682647510351962/image.png?ex=69bd74e4&is=69bc2364&hm=fd46cb28b8ae3a522bd0b4a040e8b1558e33a969345d77e20c3c27846c8446e3&=&format=webp&quality=lossless&width=298&height=656)
 
 ### 📱 /mapa
 
@@ -98,6 +110,10 @@
 ### 📱 /perfil
 
 ![perfilm](https://cdn.discordapp.com/attachments/1483682269184004278/1483682959616643093/image.png?ex=69bb7aef&is=69ba296f&hm=8471da53645f466e96af4df5e4e27f82554f5bb91420f1e1ffbe253261e10da7&)
+
+#### 📱 /menu
+
+![menumobile](https://media.discordapp.net/attachments/1483682269184004278/1483682787834724372/image.png?ex=69bd7506&is=69bc2386&hm=c15b4b1d74d8c3248c32590729f3d91f134dd8950908c06804ae73dc22bb14ba&=&format=webp&quality=lossless)
 
 ### 🔗 Link de Acceso - Diseño UI
 

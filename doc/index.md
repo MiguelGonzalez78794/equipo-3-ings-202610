@@ -7,6 +7,7 @@
 | Sección | Descripción |
 |---|---|
 | [Análisis](./analysis/index.md) | Requisitos funcionales y no funcionales, y navegación interna |
+| [Design](./design/index.md) | Documentación de la fase de diseño del sistema AGE |
 
 ---
 

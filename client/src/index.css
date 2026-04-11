@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+/* Basic config for the project */
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Project's colors for Tailwind*/
+@theme {
+  --color-blanco-bg: #ffffff;
+  --color-gris-bg2: #d4d3d1;
+  --color-griso-prf: #5e5958;
+  --color-rojo-enf: #fd0000;
+  --color-negro-txt: #000000;
+  --color-amarillo-xbtn: #ffa800;
+  --color-rosa-btn: #ff656b;
+  --color-azul-url: #009dcd;
+  --color-rosa-menu: #e8d6d7;
+}
+
+/* Header config */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}

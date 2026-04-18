@@ -1,14 +1,5 @@
 @import "tailwindcss";
 
-/* Basic config for the project */
-body {
-  margin: 0;
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 /* Project's colors for Tailwind*/
 @theme {
   --color-blanco-bg: #ffffff;
@@ -16,10 +7,13 @@ body {
   --color-griso-prf: #5e5958;
   --color-rojo-enf: #fd0000;
   --color-negro-txt: #000000;
+  --color-negro-ph: #000000;
   --color-amarillo-xbtn: #ffa800;
   --color-rosa-btn: #ff656b;
   --color-azul-url: #009dcd;
   --color-rosa-menu: #e8d6d7;
+  --background-image-landing: url(./src/assets/landingbg.png);
+  --background-image-activid: url(./src/assets/actividadesbg.png)
 }
 
 /* Header config */
@@ -29,3 +23,15 @@ body {
   justify-content: space-between;
   width: 100%;
 }
+
+
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-blanco-bg);
+}
+

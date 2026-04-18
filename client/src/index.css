@@ -12,8 +12,8 @@
   --color-rosa-btn: #ff656b;
   --color-azul-url: #009dcd;
   --color-rosa-menu: #e8d6d7;
-  --background-image-landing: url(./src/assets/landingbg.png);
-  --background-image-activid: url(./src/assets/actividadesbg.png)
+  --background-image-landing: url(../src/assets/landingbg.png);
+  --background-image-activid: url(../src/assets/actividadesbg.png)
 }
 
 /* Header config */

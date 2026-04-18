@@ -10,7 +10,11 @@ export default function LogOut() {
   const supportEmail = (
    "asesoria.integral@upb.edu.co"
   );
-
+  /**SupaBase Log Out
+    *Making use of Supabase's function "signOut" the user's local session is terminated
+    *Once the session is terminated, the user will be lead to this page
+    *This page is not listed under the menu, as it serves more as a proof of the log out's functionality
+  */
   return (
     <div className="bg-landing bg-center bg-cover flex flex-col h-screen">
       <Header />

@@ -5,13 +5,23 @@ import Header from '../components/organisms/Header2'
 import Footer from '../components/organisms/Footer'
 import SearchBar from '../components/organisms/Search';
 
+/** Buscar
+    * By making use of Javascript's filter and a collection of the available pages in searchIndex.json
+    * The query will be compared with the contents of the description and tags in order to find a fitting result
+    */
 const Buscar = () => {
   const [query, setQuery] = useState('');
   const navigate = useNavigate();
-
+  
+  /** filteredResults
+    * The function in charge of computing  the results after filtering, creates a new list with only the matching results
+    */
   const filteredResults = useMemo(() => {
     if (!query.trim()) return [];
 
+    /** lowerQuery
+    * Makes sure the search can be filtered easily by normalizing to only lowercase
+    */
     const lowerQuery = query.toLowerCase();
     return searchData.filter((item) => {
       return (
@@ -94,6 +104,7 @@ const Buscar = () => {
                 </div>
               ))
             ) : (
+              {/* In case of no results display: */}
               <div className="text-center py-20 rounded-sm border border-dashed border-gris-bg2">
                 <p className="text-gray-500 text-lg">
                   No encontramos resultados para "<strong>{query}</strong>"

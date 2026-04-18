@@ -1,0 +1,44 @@
+import React, { useState } from 'react';
+import { useNavigate } from "react-router-dom";
+import Header from '../components/organisms/IniHeader';
+import Footer from "../components/organisms/Footer";
+import PageCard from '../components/atoms/Card';
+
+export default function LogOut() {
+  const navigate = useNavigate();
+
+  const supportEmail = (
+   "asesoria.integral@upb.edu.co"
+  );
+
+  return (
+    <div className="bg-landing bg-center bg-cover flex flex-col h-screen">
+      <Header />
+        <main className="flex flex-1 items-center justify-center px-4 py-12 relative">
+          <div className="fixed inset-0 backdrop-blur-xs" />
+          <PageCard footer={supportEmail ? `¿Necesitas ayuda? ${supportEmail}` : "¿Necesitas ayuda? Contacta al soporte técnico."}>
+            <div className='text-center flex flex-col items-center gap-0'>
+
+                {/*-----*/}
+
+                <h1 className="text-2xl font-bold text-gray-900 tracking-tight mb-4">
+                  Cierre de Sesión
+                </h1>
+                <div className="mb-8">
+              
+                  <div className="space-y-1.5">
+                    <p className="text-base font-semibold text-gray-800">
+                      Su sesión se ha cerrado con éxito
+                    </p>
+                    <p className="text-sm text-gray-500">
+                      Por favor cierre esta pestaña en su navegador
+                    </p>
+                  </div>
+                </div>
+
+            </div>
+          </PageCard>
+        </main>
+    </div>
+  );
+}

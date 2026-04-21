@@ -1,37 +1,6 @@
 @import "tailwindcss";
 
-/* Project's colors for Tailwind*/
-@theme {
-  --color-blanco-bg: #ffffff;
-  --color-gris-bg2: #d4d3d1;
-  --color-griso-prf: #5e5958;
-  --color-rojo-enf: #fd0000;
-  --color-negro-txt: #000000;
-  --color-negro-ph: #000000;
-  --color-amarillo-xbtn: #ffa800;
-  --color-rosa-btn: #ff656b;
-  --color-azul-url: #009dcd;
-  --color-rosa-menu: #e8d6d7;
-  --background-image-landing: url(../src/assets/landingbg.png);
-  --background-image-activid: url(../src/assets/actividadesbg.png)
-}
-
-/* Header config */
-.header-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-
-
-
 body {
-  margin: 0;
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: var(--color-blanco-bg);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #f5f5f5;
 }
-

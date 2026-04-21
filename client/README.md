@@ -1,4 +1,4 @@
-# UPB AGE (Asistente General Estudiantil)
+# UPB Primíparos
 
 App web para estudiantes nuevos de la Universidad Pontificia Bolivariana - Medellín.
 

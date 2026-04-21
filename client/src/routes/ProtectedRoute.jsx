@@ -9,9 +9,5 @@ export default function ProtectedRoute({ children }) {
     getSession().then(setSession);
   }, []);
 
-  if (session === undefined) return null; // cargando
-
-  if (!session) return <Navigate to="/" replace />;
-
-  return children;
+  return children; // BYPASS TEMPORAL PARA TESTEO UI
 }

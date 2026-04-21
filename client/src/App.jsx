@@ -14,12 +14,12 @@ const AppContent = () => {
 
   return (
     <>
-      <Menu 
-        isOpen={isMenuOpen} 
-        onClose={closeMenu} 
-        onNavigate={handleNavigate} 
-      />
-      <AppRouter />
+       <Menu 
+         isOpen={isMenuOpen} 
+         onClose={closeMenu} 
+         onNavigate={handleNavigate} 
+       />
+       <AppRouter onNavigate={handleNavigate} />
     </>
   );
 };

@@ -1,9 +1,11 @@
 import { useState } from "react";
 import QuickAccessItem from "../atoms/DashButton"
+import { useNavigate } from "react-router-dom";
 
 const QUICK_ITEMS = [
   {
     id: "mapa",
+    path: "/mapa",
     label: "Mapa",
     icon: (
       <svg viewBox="0 0 36 36" className="w-9 h-9" fill="none" stroke="#111" strokeWidth="2">
@@ -14,6 +16,7 @@ const QUICK_ITEMS = [
   },
   {
     id: "actividades",
+    path: "/actividades",
     label: "Actividades",
     icon: (
       <svg viewBox="0 0 36 36" className="w-9 h-9" fill="none" stroke="#111" strokeWidth="2">
@@ -26,6 +29,7 @@ const QUICK_ITEMS = [
   },
   {
     id: "buscar",
+    path: "/buscar",
     label: "Buscar",
     icon: (
       <svg viewBox="0 0 36 36" className="w-9 h-9" fill="none" stroke="#111" strokeWidth="2">
@@ -36,6 +40,7 @@ const QUICK_ITEMS = [
   },
   {
     id: "foro",
+    path: "/foro",
     label: "Foro",
     icon: (
       <svg viewBox="0 0 36 36" className="w-9 h-9" fill="none" stroke="#111" strokeWidth="2">
@@ -50,6 +55,7 @@ const QUICK_ITEMS = [
   },
   {
     id: "preguntas",
+    path: "/faqs",
     label: "Preguntas",
     icon: (
       <svg viewBox="0 0 36 36" className="w-9 h-9" fill="none" stroke="#111" strokeWidth="2">
@@ -61,6 +67,7 @@ const QUICK_ITEMS = [
   },
   {
     id: "mentor",
+    path: "/mentores",
     label: "Mentor",
     icon: (
       <svg viewBox="0 0 36 36" className="w-9 h-9" fill="none" stroke="#111" strokeWidth="2">
@@ -76,6 +83,7 @@ const QUICK_ITEMS = [
 
 export default function QuickAccessGrid({ onNavigate, onSearch }) {
   const [query, setQuery] = useState("");
+  const navigate = useNavigate();
 
   const handleSearch = () => {
     if (onSearch && query.trim()) onSearch(query.trim());
@@ -110,12 +118,14 @@ export default function QuickAccessGrid({ onNavigate, onSearch }) {
         Aqui puedes encontrar accesos rapidos al aplicativo
       </p>
 
-      {/* Grid 3×2 */}
-      <div className="grid grid-cols-3 gap-3">
-        {QUICK_ITEMS.map((item) => (
-          <QuickAccessItem key={item.id} {...item} onClick={onNavigate} />
-        ))}
-      </div>
+       {/* Grid 3×2 */}
+       <div className="flex flex-col items-center gap-3">
+        <div className="grid grid-cols-3 gap-12">
+          {QUICK_ITEMS.map((item) => (
+            <QuickAccessItem key={item.id} {...item} onClick={() => navigate(item.path)} />
+          ))}
+        </div>
+       </div>
     </section>
   );
 }

@@ -1,7 +1,7 @@
 import { useState } from "react";
-import PostContent from "./PostContainer";
-import Answer from "./Ans";
-import Button from "./Button";
+import PostContent from "../atoms/PostContainer";
+import Answer from "../organisms/Ans";
+import Button from "../atoms/Button";
 
 const ThreadModal = ({ post, answers, onClose }) => {
   const [text, setText] = useState("");
@@ -20,12 +20,12 @@ const ThreadModal = ({ post, answers, onClose }) => {
         </button>
 
         <div className="bg-gray-50 border border-gray-200 rounded-lg p-3">
-          <UserContentAtom name={post.author}>
+          <PostContent name={post.author}>
             <p className="text-sm font-medium text-gray-800 leading-snug">
               {post.question}
             </p>
             <p className="text-[11px] text-gray-400 mt-1">{post.meta}</p>
-          </UserContentAtom>
+          </PostContent>
         </div>
 
         <textarea
@@ -35,7 +35,8 @@ const ThreadModal = ({ post, answers, onClose }) => {
           className="w-full min-h-20 border border-gray-200 rounded-lg px-3 py-2 text-sm text-gray-800 placeholder-gray-300 resize-y focus:outline-none focus:ring-1 focus:ring-gray-400"
         />
         <div className="flex justify-end">
-          <Button onClick={() => setText("")}>Publicar</Button>
+          <button className="px-4 py-1 bg-gray-900 text-white text-xs font-medium rounded-full hover:bg-gray-700 transition cursor-pointer"
+                  onClick={() => setText("")}>Publicar</button>
         </div>
 
         <hr className="border-gray-100" />
@@ -43,7 +44,7 @@ const ThreadModal = ({ post, answers, onClose }) => {
 
         <div className="flex flex-col gap-3">
           {answers.map((a, i) => (
-            <AnswerOrganism
+            <Answer
               key={i}
               author={a.author}
               answer={a.answer}

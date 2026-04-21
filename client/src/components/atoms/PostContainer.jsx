@@ -1,4 +1,4 @@
-import UserIcon from "./UserIcon";
+import UserIcon from "../../assets/userIcon.png";
 
 const PostContent = ({ name, children }) => {
   const [first, ...rest] = name.split(" ");
@@ -6,8 +6,8 @@ const PostContent = ({ name, children }) => {
   return (
     <div className="flex items-start gap-3">
       <div className="flex flex-col items-center gap-1 shrink-0">
-        <div className="w-9 h-9 rounded-full bg-gray-100 border border-gray-200 flex items-center justify-center">
-          <UserIcon />
+        <div className="w-9 h-9 rounded-full bg-gray-100 border border-gray-200 flex items-center justify-center overflow-hidden">
+          <img src={UserIcon} alt="User Icon" className="w-full h-full object-cover" />
         </div>
         <span className="text-[11px] text-gray-500 font-medium text-center leading-tight">
           {first}
@@ -24,4 +24,4 @@ const PostContent = ({ name, children }) => {
   );
 };
 
-export default UserContentAtom;
+export default PostContent;

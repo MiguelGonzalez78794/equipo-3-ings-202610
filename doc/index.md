@@ -38,3 +38,6 @@ El objetivo principal es reducir la confusión, la desinformación y la pérdida
 **Usuarios secundarios**
 - Mentores estudiantiles, tutores o monitores que participan en el foro de ayuda.
 - Personal académico o administrativo (si se integra información oficial en la plataforma).
+
+## URL Tablero Backlog 🗃️
+[Tablero Backlog - Trello](https://trello.com/b/S7t24tIj/sprint-backlog)

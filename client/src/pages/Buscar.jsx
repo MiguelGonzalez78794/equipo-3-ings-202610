@@ -104,15 +104,15 @@ const Buscar = () => {
                 </div>
               ))
             ) : (
-              {/* In case of no results display: */}
-              <div className="text-center py-20 rounded-sm border border-dashed border-gris-bg2">
-                <p className="text-gray-500 text-lg">
-                  No encontramos resultados para "<strong>{query}</strong>"
-                </p>
-                <p className="text-gray-400 text-sm mt-2">
-                  Prueba con otras palabras clave o revisa la ortografía.
-                </p>
-              </div>
+              
+                <div className="text-center py-20 rounded-sm border border-dashed border-gris-bg2">
+                  <p className="text-gray-500 text-lg">
+                    No encontramos resultados para "<strong>{query}</strong>"
+                  </p>
+                  <p className="text-gray-400 text-sm mt-2">
+                    Prueba con otras palabras clave o revisa la ortografía.
+                  </p>
+                </div>
             )}
           </div>
         </div>

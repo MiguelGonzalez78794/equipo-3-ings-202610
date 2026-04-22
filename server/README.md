@@ -39,3 +39,54 @@ The project uses **Supabase** as its backend, which provides the following secur
 | Rate limiting | ✅ Active by default |
 | Email confirmation | ⏳ Enabled in production |
 | Captcha (hCaptcha) | ⏳ Enabled in production |
+
+## Code Standards
+
+This project follows the following standards:
+
+- **JSDoc** is used to document functions and services. Example:
+```js
+/**
+ * Logs in a user with email and password
+ * @param {string} email - User email
+ * @param {string} password - User password
+ * @param {string} captchaToken - hCaptcha token
+ * @returns {Promise<object>} Supabase session data
+ */
+export async function login(email, password, captchaToken) { ... }
+```
+- Component names use **PascalCase** → `LoginForm`, `Dashboard`
+- Service files use **camelCase** → `auth.service.js`, `foro.service.js`
+- All Git commits must be written in **English** following the format: `type: description` (e.g. `feat: add forum page`)
+
+## Tech Stack & Versions
+
+| Technology | Version |
+|---|---|
+| Node.js | v18+ |
+| React | v18.3.1 |
+| Vite | v6.x |
+| react-router-dom | v6.26.0 |
+| @supabase/supabase-js | v2.x |
+| JavaScript | ES2022+ |
+
+## Database Requirements
+
+This project uses **Supabase** (PostgreSQL) as its database. To set it up:
+
+1. Create a free account at [supabase.com](https://supabase.com)
+2. Create a new project
+3. Run the SQL schema located in `doc/database/schema.sql` in the Supabase SQL Editor
+4. Run the seed data in `doc/database/seed.sql` to populate initial data
+5. Get your credentials from **Project Settings → API**:
+   - `VITE_SUPABASE_URL`
+   - `VITE_SUPABASE_ANON_KEY`
+6. Add them to your `front/.env` file
+
+### Required tables
+- `profiles` — user profiles
+- `profesores` — faculty directory
+- `ubicaciones` — campus locations
+- `faqs` — frequently asked questions
+- `post` — community forum posts
+- `respuesta_post` — forum replies

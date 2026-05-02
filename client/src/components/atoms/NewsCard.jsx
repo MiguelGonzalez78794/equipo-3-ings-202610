@@ -21,8 +21,8 @@ export default function NewsCard({ image, fallbackBg = "#c9bfb0", title, descrip
 
       {/* Texto */}
       <div className="p-2.5">
-        <h3 className="text-xs font-bold text-gray-900 mb-1 leading-snug">{title}</h3>
-        <p className="text-[11px] text-gray-500 leading-snug">{description}</p>
+        <h3 className="text-xs font-bold text-negro-txt mb-1 leading-snug">{title}</h3>
+        <p className="text-[11px] text-negro-txt leading-snug">{description}</p>
       </div>
     </div>
   );

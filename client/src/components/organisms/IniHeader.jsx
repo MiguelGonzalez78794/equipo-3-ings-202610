@@ -1,4 +1,5 @@
 import React from 'react';
+import AccessButton from '../atoms/AccessButton';
 
 const IniHeader = () => {
   return (
@@ -7,11 +8,7 @@ const IniHeader = () => {
 
     {/* Left: Accessibility button */}
     <div className="flex flex-col items-center">
-      <img
-        src="accesibilidad.png"
-        alt="Accesibilidad"
-        className="w-12 h-12 object-contain cursor-pointer px-0.5"
-      />
+      <AccessButton />
       <span className="text-[10px] font-bold mt-0.5">
         Accesibilidad
       </span>

@@ -55,7 +55,7 @@ export default function SidebarNav({ isOpen, onClose, onNavigate }) {
         aria-label="Menú principal"
         className={[
           "fixed top-0 right-0 z-52 h-full w-67.5",
-          "bg-white border-l border-[#e8e0db]",
+          "bg-blanco-bg border-l border-[#e8e0db]",
           "flex flex-col",
           "shadow-[4px_0_32px_rgba(168,0,100,0.08)]",
           "transition-transform duration-350 ease-in-out",

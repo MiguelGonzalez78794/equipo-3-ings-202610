@@ -10,7 +10,7 @@ export default function AccessButton(){
             <img
                 src={img}
                 alt="Accesibilidad"
-                className="w-11 h-11 object-contain cursor-pointer transition-all duration-300 hover:-translate-y-0.5 hover:shadow-negro-txt translate-y-px"
+                className="w-8 h-8 md:w-11 md:h-11 object-contain cursor-pointer transition-all duration-300 hover:-translate-y-0.5 hover:shadow-negro-txt translate-y-px"
                 onClick={() => setIsOpen(!isOpen)}
             />
             {isOpen && (

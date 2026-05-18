@@ -16,20 +16,20 @@ const Header2 = () => {
 
 
   return (
-    <header className="sticky top-0 z-50 bg-blanco-bg border-b border-negro-txt px-4 py-4 w-full">
-      <div className="flex items-center justify-between w-full h-16 mx-4">
+    <header className="sticky top-0 z-50 bg-blanco-bg border-b border-negro-txt px-2 md:px-4 py-2 md:py-4 w-full">
+      <div className="flex items-center justify-between w-full h-14 md:h-16">
 
         {/* Left: UPB Logo */}
           
           <img
           src="upb.png"
           alt="UPB Logo"
-          className="h-14 w-auto object-contain cursor-pointer ml-4"
+          className="h-10 md:h-14 w-auto object-contain cursor-pointer ml-2 md:ml-4"
           onClick={() => navigate("/dashboard")}
           />
 
         {/* Right: Buttons (Perfil and Menú) */}
-        <div className="flex flex-control items-center px-1 mr-4">
+        <div className="flex items-center gap-2 px-1 mr-2 md:mr-4">
           <AccessButton />
           <Button
             text="Perfil"

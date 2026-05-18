@@ -54,19 +54,19 @@ export default function Actividades() {
         
         {/* Banner Superior */}
         <div 
-          className="w-full bg-activid bg-center mb-8 flex items-center justify-center relative overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.1)] before:absolute before:inset-0 before:bg-black/20 before:content-[''] py-20" 
+          className="w-full bg-activid bg-center mb-8 flex items-center justify-center relative overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.1)] before:absolute before:inset-0 before:bg-black/20 before:content-[''] py-10 md:py-20" 
           
         >
 	    
-          <div className="relative z-10 bg-gris-bg2/85 backdrop-blur-md py-12 mb-20 px-12 rounded-xl text-center max-w-140">
-            <h1 className="text-[2.5rem] font-extrabold text-negro-txt mb-2">Actividades</h1>
-            <p className="text-[1.5rem] font-light wrap-normal text-negro-txt">Aquí podrás ver las actividades de las que puedes participar</p>
+          <div className="relative z-10 bg-gris-bg2/85 backdrop-blur-md py-8 md:py-12 mb-10 md:mb-20 px-6 md:px-12 rounded-xl text-center w-[90%] md:w-auto md:max-w-140">
+            <h1 className="text-[2rem] md:text-[2.5rem] font-extrabold text-negro-txt mb-2">Actividades</h1>
+            <p className="text-[1.2rem] md:text-[1.5rem] font-light wrap-normal text-negro-txt">Aquí podrás ver las actividades de las que puedes participar</p>
           </div>
         
         </div>
 
-        <div className="px-10">
-          <h2 className="text-4xl font-bold mb-8 text-[#1a1a1a]">Disponibles</h2>
+        <div className="px-4 md:px-10">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 md:mb-8 text-[#1a1a1a]">Disponibles</h2>
 
           {/* Grilla de Actividades */}
           <div className="grid grid-cols-1 md:grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-8 mt-4">
@@ -90,18 +90,18 @@ export default function Actividades() {
 
           {/* Modal Desplegable */}
           {actividadActiva && (
-            <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-1000 p-8 animate-[fadeIn_0.3s_ease-out]" onClick={closeModal}>
-              <div className="bg-white rounded-xl w-full max-w-175 max-h-[90vh] overflow-y-auto relative shadow-[0_15px_50px_rgba(0,0,0,0.3)] animate-[slideUp_0.4s_cubic-bezier(0.16,1,0.3,1)]" onClick={(e) => e.stopPropagation()}>
-                <button className="absolute top-3.75 left-3.75 w-10 h-10 bg-[#fa0] text-black rounded-full text-lg font-bold flex items-center justify-center transition-transform hover:scale-110 hover:bg-[#fc0] z-10" onClick={closeModal}>X</button>
+            <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-[1000] p-4 md:p-8 animate-[fadeIn_0.3s_ease-out]" onClick={closeModal}>
+              <div className="bg-white rounded-xl w-full max-w-[95%] md:max-w-[700px] max-h-[90vh] overflow-y-auto relative shadow-[0_15px_50px_rgba(0,0,0,0.3)] animate-[slideUp_0.4s_cubic-bezier(0.16,1,0.3,1)]" onClick={(e) => e.stopPropagation()}>
+                <button className="absolute top-3 md:top-3.75 left-3 md:left-3.75 w-8 h-8 md:w-10 md:h-10 bg-[#fa0] text-black rounded-full text-lg font-bold flex items-center justify-center transition-transform hover:scale-110 hover:bg-[#fc0] z-10" onClick={closeModal}>X</button>
                 
-                <div className="w-full h-87.5 p-6 pb-0">
+                <div className="w-full h-48 md:h-87.5 p-4 md:p-6 pb-0">
                   
                 </div>
 
-                <div className="p-8 text-center">
-                  <h2 className="text-[2.2rem] font-extrabold mb-4 text-[#111]">{actividadActiva.titulo}</h2>
-                  <p className="text-[1.15rem] text-[#444] leading-relaxed mb-8">{actividadActiva.descripcion}</p>
-                  <button className="bg-[#e3001b] text-white rounded-lg py-4 px-12 text-[1.3rem] font-bold cursor-pointer transition-all duration-300 shadow-md hover:bg-[#bf0015] hover:-translate-y-0.75 hover:shadow-lg" onClick={() => {
+                <div className="p-6 md:p-8 text-center">
+                  <h2 className="text-[1.8rem] md:text-[2.2rem] font-extrabold mb-4 text-[#111]">{actividadActiva.titulo}</h2>
+                  <p className="text-[1rem] md:text-[1.15rem] text-[#444] leading-relaxed mb-8">{actividadActiva.descripcion}</p>
+                  <button className="bg-[#e3001b] text-white rounded-lg py-3 md:py-4 px-8 md:px-12 text-[1.1rem] md:text-[1.3rem] font-bold cursor-pointer transition-all duration-300 shadow-md hover:bg-[#bf0015] hover:-translate-y-0.75 hover:shadow-lg" onClick={() => {
                     alert(`Te has inscrito a ${actividadActiva.titulo}`);
                     closeModal();
                   }}>

@@ -36,17 +36,17 @@ export default function Actividades() {
   const closeModal = () => setActividadActiva(null);
 
   return (
-    <div className="overflow-x-hidden">
+    <div>
       <Header />
-      <div className="flex flex-col pb-8 animate-[fadeIn_0.4s_ease-out]">
+      <div className="flex flex-col pb-8 animate-[fadeIn_0.4s_ease-out] overflow-x-hidden">
         <style>
           {`
             @keyframes fadeIn {
-              from { opacity: 0; transform: translateY(10px); }
+              from { opacity: 0; transform: translateY(0.625rem); }
               to { opacity: 1; transform: translateY(0); }
             }
             @keyframes slideUp {
-              from { opacity: 0; transform: translateY(40px) scale(0.95); }
+              from { opacity: 0; transform: translateY(2.5rem) scale(0.95); }
               to { opacity: 1; transform: translateY(0) scale(1); }
             }
           `}
@@ -54,7 +54,7 @@ export default function Actividades() {
         
         {/* Banner Superior */}
         <div 
-          className="w-full bg-activid bg-center mb-8 flex items-center justify-center relative overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.1)] before:absolute before:inset-0 before:bg-black/20 before:content-[''] py-20" 
+          className="w-full bg-activid bg-center mb-8 flex items-center justify-center relative overflow-hidden shadow-[0_0.25rem_1.25rem_rgba(0,0,0,0.1)] before:absolute before:inset-0 before:bg-black/20 before:content-[''] py-20" 
           
         >
 	    
@@ -66,19 +66,19 @@ export default function Actividades() {
         </div>
 
         <div className="px-10">
-          <h2 className="text-4xl font-bold mb-8 text-[#1a1a1a]">Disponibles</h2>
+          <h2 className="text-4xl font-bold mb-8 text-negro-txt">Disponibles</h2>
 
           {/* Grilla de Actividades */}
           <div className="grid grid-cols-1 md:grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-8 mt-4">
             {listaActividades.map((act) => (
-              <div key={act.id} className="group bg-[#e6e6e6] rounded-xl overflow-hidden shadow-[0_4px_15px_rgba(0,0,0,0.05)] flex flex-col transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_8px_25px_rgba(0,0,0,0.15)]">
-                <div className="w-full h-50 overflow-hidden p-4 bg-white">
+              <div key={act.id} className="group  rounded-xl overflow-hidden shadow-[0_0.25rem_0.9375rem_rgba(0,0,0,0.05)] flex flex-col transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_0.5rem_1.5625rem_rgba(0,0,0,0.15)]">
+                <div className="w-full h-50 overflow-hidden p-4 bg-blanco-bg">
                   
                 </div>
                 <div className="p-6 text-center flex flex-col grow">
-                  <h3 className="text-[1.6rem] font-bold mb-1 text-[#111]">{act.titulo}</h3>
-                  <p className="text-base text-[#555] mb-4">{act.subtitulo}</p>
-                  <p className="text-[0.95rem] text-[#333] mb-6 whitespace-pre-line grow">{act.detalle}</p>
+                  <h3 className="text-[1.6rem] font-bold mb-1 text-negro-txt">{act.titulo}</h3>
+                  <p className="text-base text-negro-txt mb-4">{act.subtitulo}</p>
+                  <p className="text-[0.95rem] text-negro-txt mb-6 whitespace-pre-line grow">{act.detalle}</p>
                   <p className="text-[0.9rem] text-[#4da6ff] underline cursor-pointer mb-4">¿No sabes como llegar?</p>
                   <button className="bg-[#e3001b] text-white rounded-lg py-3 px-6 text-[1.1rem] font-bold cursor-pointer w-full transition-all duration-300 hover:bg-[#bf0015] hover:-translate-y-0.5" onClick={() => openModal(act)}>
                     Mas Información
@@ -91,16 +91,16 @@ export default function Actividades() {
           {/* Modal Desplegable */}
           {actividadActiva && (
             <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-1000 p-8 animate-[fadeIn_0.3s_ease-out]" onClick={closeModal}>
-              <div className="bg-white rounded-xl w-full max-w-175 max-h-[90vh] overflow-y-auto relative shadow-[0_15px_50px_rgba(0,0,0,0.3)] animate-[slideUp_0.4s_cubic-bezier(0.16,1,0.3,1)]" onClick={(e) => e.stopPropagation()}>
-                <button className="absolute top-3.75 left-3.75 w-10 h-10 bg-[#fa0] text-black rounded-full text-lg font-bold flex items-center justify-center transition-transform hover:scale-110 hover:bg-[#fc0] z-10" onClick={closeModal}>X</button>
+              <modal className="bg-blanco-bg rounded-xl w-full max-w-175 max-h-[90vh] overflow-y-auto relative shadow-[0_0.9375rem_3.125rem_rgba(0,0,0,0.3)] animate-[slideUp_0.4s_cubic-bezier(0.16,1,0.3,1)]" onClick={(e) => e.stopPropagation()}>
+                <button className="absolute top-3.75 left-3.75 w-10 h-10 bg-amarillo-xbtn text-negro-txt rounded-full text-lg font-bold flex items-center justify-center transition-transform hover:scale-110 hover:bg-[#fc0] z-10" onClick={closeModal}>X</button>
                 
                 <div className="w-full h-87.5 p-6 pb-0">
                   
                 </div>
 
                 <div className="p-8 text-center">
-                  <h2 className="text-[2.2rem] font-extrabold mb-4 text-[#111]">{actividadActiva.titulo}</h2>
-                  <p className="text-[1.15rem] text-[#444] leading-relaxed mb-8">{actividadActiva.descripcion}</p>
+                  <h2 className="text-[2.2rem] font-extrabold mb-4 text-negro-txt">{actividadActiva.titulo}</h2>
+                  <p className="text-[1.15rem] text-negro-txt/70 leading-relaxed mb-8">{actividadActiva.descripcion}</p>
                   <button className="bg-[#e3001b] text-white rounded-lg py-4 px-12 text-[1.3rem] font-bold cursor-pointer transition-all duration-300 shadow-md hover:bg-[#bf0015] hover:-translate-y-0.75 hover:shadow-lg" onClick={() => {
                     alert(`Te has inscrito a ${actividadActiva.titulo}`);
                     closeModal();
@@ -108,7 +108,7 @@ export default function Actividades() {
                     Participar
                   </button>
                 </div>
-              </div>
+              </modal>
             </div>
           )}
         </div>

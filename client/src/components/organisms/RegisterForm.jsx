@@ -11,8 +11,10 @@ export default function RegisterForm() {
     programa: "",
     semestre: "",
   });
+
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -21,18 +23,20 @@ export default function RegisterForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     setError("");
     setLoading(true);
+
     try {
       await register({
         email: form.email,
-        password:
-          form.password,
+        password: form.password,
         fullName: form.fullName,
         role: form.role,
         programa: form.programa,
         semestre: parseInt(form.semestre),
       });
+
       navigate("/dashboard");
     } catch (err) {
       setError(err.message);
@@ -42,88 +46,117 @@ export default function RegisterForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={styles.form}>
-      <h2 style={styles.title}>Crear cuenta</h2>
-      <p style={styles.subtitle}>
+    <form
+      onSubmit={handleSubmit}
+      className="flex w-full max-w-100 flex-col gap-4 rounded-xl border border-[#e0e0e0] bg-blanco-bg p-8"
+    >
+      <h2 className="text-[1.4rem] font-medium text-negro-txt">
+        Crear cuenta
+      </h2>
+
+      <p className="m-0 text-[0.8125rem] text-negro-txt/70">
         Regístrate con tu correo institucional UPB
       </p>
 
-      {error && <p style={styles.error}>{error}</p>}
+      {error && (
+        <p className="m-0 rounded-md bg-[#fdecea] px-2.5 py-2 text-[0.8125rem] text-[#c0392b]">
+          {error}
+        </p>
+      )}
 
-      <div style={styles.field}>
-        <label style={styles.label}>Nombre completo</label>
+      <div className="flex flex-col gap-1.5">
+        <label className="text-[0.875rem] text-negro-txt/70">
+          Nombre completo
+        </label>
+
         <input
           name="fullName"
           value={form.fullName}
           onChange={handleChange}
-          style={styles.input}
           placeholder="Tu nombre completo"
           required
+          className="rounded-lg border border-[#ccc] px-3 py-2.5 text-[0.9375rem] outline-none placeholder-negro-txt/70"
         />
       </div>
 
-      <div style={styles.field}>
-        <label style={styles.label}>Correo institucional</label>
+      <div className="flex flex-col gap-1.5">
+        <label className="text-[0.875rem] text-negro-txt/70">
+          Correo institucional
+        </label>
+
         <input
           name="email"
           type="email"
           value={form.email}
           onChange={handleChange}
-          style={styles.input}
           placeholder="correo@upb.edu.co"
           required
+          className="rounded-lg border border-[#ccc] px-3 py-2.5 text-[0.9375rem] outline-none placeholder-negro-txt/70"
         />
       </div>
 
-      <div style={styles.field}>
-        <label style={styles.label}>Contraseña</label>
+      <div className="flex flex-col gap-1.5">
+        <label className="text-[0.875rem] text-negro-txt/70">
+          Contraseña
+        </label>
+
         <input
           name="password"
           type="password"
           value={form.password}
           onChange={handleChange}
-          style={styles.input}
           placeholder="Mínimo 6 caracteres"
           required
+          className="rounded-lg border border-[#ccc] px-3 py-2.5 text-[0.9375rem] outline-none placeholder-negro-txt/70"
         />
       </div>
 
-      <div style={styles.field}>
-        <label style={styles.label}>Rol</label>
+      <div className="flex flex-col gap-1.5">
+        <label className="text-[0.875rem] text-negro-txt/70">
+          Rol
+        </label>
+
         <select
           name="role"
           value={form.role}
           onChange={handleChange}
-          style={styles.input}
+          className="rounded-lg border border-[#ccc] px-3 py-2.5 text-[0.9375rem] outline-none text-negro-txt/70"
         >
           <option value="estudiante">Estudiante</option>
           <option value="profesor">Profesor</option>
         </select>
       </div>
 
-      <div style={styles.field}>
-        <label style={styles.label}>Programa académico</label>
+      <div className="flex flex-col gap-1.5">
+        <label className="text-[0.875rem] text-negro-txt/70">
+          Programa académico
+        </label>
+
         <input
           name="programa"
           value={form.programa}
           onChange={handleChange}
-          style={styles.input}
           placeholder="Ej: Ingeniería de Sistemas"
           required
+          className="rounded-lg border border-[#ccc] px-3 py-2.5 text-[0.9375rem] outline-none placeholder-negro-txt/70"
         />
       </div>
 
       {form.role === "estudiante" && (
-        <div style={styles.field}>
-          <label style={styles.label}>Semestre</label>
+        <div className="flex flex-col gap-1.5">
+          <label className="text-[0.875rem] text-negro-txt/70">
+            Semestre
+          </label>
+
           <select
             name="semestre"
             value={form.semestre}
             onChange={handleChange}
-            style={styles.input}
             required
+            className="rounded-lg border border-[#ccc] px-3 py-2.5 text-[0.9375rem] outline-none text-negro-txt/70"
           >
             <option value="">Selecciona tu semestre</option>
+
             {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((s) => (
               <option key={s} value={s}>
                 {s}
@@ -133,66 +166,23 @@ export default function RegisterForm() {
         </div>
       )}
 
-      <button type="submit" disabled={loading} style={styles.button}>
+      <button
+        type="submit"
+        disabled={loading}
+        className="cursor-pointer rounded-lg border-none bg-[#111] px-2.5 py-2.5 text-[0.9375rem] font-medium text-white disabled:cursor-not-allowed disabled:opacity-70"
+      >
         {loading ? "Registrando..." : "Crear cuenta"}
       </button>
 
-      <p style={styles.login}>
+      <p className="m-0 text-center text-[0.8125rem] text-[#888]">
         ¿Ya tienes cuenta?{" "}
-        <span onClick={() => navigate("/")} style={styles.link}>
+        <span
+          onClick={() => navigate("/")}
+          className="cursor-pointer font-medium text-negro-txt underline"
+        >
           Inicia sesión
         </span>
       </p>
     </form>
   );
 }
-
-const styles = {
-  form: {
-    display: "flex",
-    flexDirection: "column",
-    gap: "1rem",
-    width: "100%",
-    maxWidth: "400px",
-    padding: "2rem",
-    borderRadius: "12px",
-    border: "1px solid #e0e0e0",
-    backgroundColor: "#fff",
-  },
-  title: { margin: 0, fontSize: "1.4rem", fontWeight: 500 },
-  subtitle: { margin: 0, fontSize: "13px", color: "#888" },
-  field: { display: "flex", flexDirection: "column", gap: "6px" },
-  label: { fontSize: "14px", color: "#555" },
-  input: {
-    padding: "10px 12px",
-    borderRadius: "8px",
-    border: "1px solid #ccc",
-    fontSize: "15px",
-    outline: "none",
-  },
-  button: {
-    padding: "10px",
-    borderRadius: "8px",
-    border: "none",
-    backgroundColor: "#111",
-    color: "#fff",
-    fontSize: "15px",
-    fontWeight: 500,
-    cursor: "pointer",
-  },
-  error: {
-    color: "#c0392b",
-    fontSize: "13px",
-    padding: "8px 10px",
-    backgroundColor: "#fdecea",
-    borderRadius: "6px",
-    margin: 0,
-  },
-  login: { fontSize: "13px", textAlign: "center", color: "#888", margin: 0 },
-  link: {
-    color: "#111",
-    fontWeight: 500,
-    cursor: "pointer",
-    textDecoration: "underline",
-  },
-};

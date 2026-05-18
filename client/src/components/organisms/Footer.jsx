@@ -2,10 +2,10 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-gris-bg2 px-8 py-5 flex items-center justify-between gap-6 w-full mx-auto ">
+    <footer className="bg-gris-bg2 px-4 md:px-8 py-8 md:py-5 flex flex-col md:flex-row text-center md:text-left justify-between gap-8 md:gap-6 w-full mx-auto ">
 
       {/* Contact info */}
-      <div className="min-w-50">
+      <div className="w-full md:min-w-50">
         <p className="font-extrabold text-sm text-gray-900 mb-2">
           Contáctanos
         </p>
@@ -24,15 +24,15 @@ const Footer = () => {
       </div>
 
       {/* Logo UPB + Legal info */}
-      <div className="flex items-center gap-4">
+      <div className="flex flex-col md:flex-row items-center gap-4">
         <img
           src="upb-b.png"
           alt="UPB Logo Blanco Y negro"
-          className="h-14 w-auto object-contain"
+          className="h-12 md:h-14 w-auto object-contain mb-2 md:mb-0"
         />
-        <div className="text-center">
-          <p className="text-sm text-gray-900">N
-            it UPB: 890.902.922-6.
+        <div className="text-center md:text-left">
+          <p className="text-sm text-gray-900">
+            Nit UPB: 890.902.922-6.
           </p>
           
           <p className="text-sm text-gray-900">

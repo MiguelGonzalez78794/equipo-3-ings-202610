@@ -46,7 +46,7 @@ export default function Mentores() {
   return (
     <div>
       <Header />
-      <main className="animate-[fadeIn_0.5s_ease-out] px-12 py-8">
+      <main className="animate-[fadeIn_0.5s_ease-out] px-4 md:px-12 py-8">
         <style>
           {`
             @keyframes fadeIn {
@@ -62,13 +62,13 @@ export default function Mentores() {
         
         <div className="flex flex-col md:flex-row justify-between items-center mb-12 pb-8 border-b border-[#eaeaea] text-center md:text-left">
           <div className="max-w-full md:max-w-[65%] mb-8 md:mb-0">
-            <h1 className="text-[2.2rem] font-bold text-[#1a1a1a] mb-3">Bienvenido al apartado de mentores!</h1>
-            <p className="text-xl text-[#4a4a4a] leading-relaxed">
+            <h1 className="text-[2.2rem] font-bold text-negro-txt mb-3">Bienvenido al apartado de mentores!</h1>
+            <p className="text-xl text-negro-txt leading-relaxed">
               Aqui encontrarás lo necesario para conocer los mentores disponibles en la institución
             </p>
           </div>
-          <div className="w-30 h-30 opacity-80">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#242424" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
+          <div className="w-30 h-30 opacity-80 ">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#242424" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full stroke-negro-txt">
               <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
               <circle cx="9" cy="7" r="4"></circle>
               <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
@@ -77,12 +77,12 @@ export default function Mentores() {
           </div>
         </div>
 
-        <h2 className="text-4xl font-bold mb-8 text-[#1a1a1a]">Mentores Disponibles</h2>
+        <h2 className="text-4xl font-bold mb-8 text-negro-txt">Mentores Disponibles</h2>
 
         <div className="flex flex-col md:flex-row gap-8 md:overflow-x-auto py-4 md:snap-x snap-mandatory scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
           {mentores.map((mentor) => (
-            <div key={mentor.id} className="min-w-full md:min-w-[320px] bg-gris-bg2 rounded-xl pt-12 pb-8 px-14 flex flex-col items-center shadow-[0_4px_15px_rgba(0,0,0,0.05)] transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg snap-start">
-              <div className="w-250h-25-[#333] mb-6">
+            <div key={mentor.id} className="min-w-full md:min-w-[20rem] bg-gris-bg2 rounded-xl pt-8 md:pt-12 pb-8 px-6 md:px-14 flex flex-col items-center shadow-[0_4px_15px_rgba(0,0,0,0.05)] transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg snap-start">
+              <div className="w-24 h-24 md:w-25 md:h-25 text-[#333] mb-6">
                 <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full rounded-full drop-shadow-md">
                   <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
                 </svg>
@@ -103,9 +103,9 @@ export default function Mentores() {
 
         {/* Modal Desplegable */}
         {mentorActivo && (
-          <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-1000 p-8 animate-[fadeIn_0.3s_ease-out]" onClick={closeModal}>
-            <div className="bg-white rounded-xl w-full max-w-125ative shadow-[0_15px_50px_rgba(0,0,0,0.3)] pt-12 px-8 pb-8 animate-[slideUp_0.4s_cubic-bezier(0.16,1,0.3,1)]" onClick={(e) => e.stopPropagation()}>
-              <button className="absolute top-3.75 left-3.75 w-10 h-10 bg-[#fa0] text-black rounded-full text-lg font-bold flex items-center justify-center transition-transform hover:scale-110 hover:bg-[#fc0]" onClick={closeModal}>X</button>
+          <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-1000 p-4 md:p-8 animate-[fadeIn_0.3s_ease-out]" onClick={closeModal}>
+            <modal className="bg-blanco-bg rounded-xl w-full max-w-[95%] md:max-w-125 relative shadow-[0_15px_50px_rgba(0,0,0,0.3)] pt-8 md:pt-12 px-6 md:px-8 pb-6 md:pb-8 animate-[slideUp_0.4s_cubic-bezier(0.16,1,0.3,1)]" onClick={(e) => e.stopPropagation()}>
+              <button className="absolute top-3 md:top-3.75 left-3 md:left-3.75 w-8 h-8 md:w-10 md:h-10 bg-amarillo-xbtn text-black rounded-full text-lg font-bold flex items-center justify-center transition-transform hover:scale-110 hover:bg-[#fc0]" onClick={closeModal}>X</button>
               
               <div className="flex flex-col items-center text-center">
                 <div className="w-30 h-30 text-[#333] mb-6">
@@ -114,17 +114,17 @@ export default function Mentores() {
                    </svg>
                 </div>
                 <div className="w-full">
-                  <h2 className="text-[1.8rem] font-extrabold text-[#111] mb-1">{mentorActivo.nombre}</h2>
-                  <h3 className="text-base text-[#666] font-medium mb-8">{mentorActivo.rol}</h3>
-                  <div className="bg-[#f9f9f9] rounded-lg p-6 text-left mb-8 border border-[#eee] w-full">
-                    <p className="text-[1.05rem] text-[#333] mb-3 flex justify-between items-center gap-4 border-b border-[#eee] pb-2 last:border-0 last:pb-0 font-medium">
-                      <strong className="min-w-25 shrink-0">📚 Materia:</strong> {mentorActivo.materia}
+                  <h2 className="text-[1.8rem] font-extrabold text-negro-txt mb-1">{mentorActivo.nombre}</h2>
+                  <h3 className="text-base text-negro-txt/80 font-medium mb-8">{mentorActivo.rol}</h3>
+                  <div className="bg-inherit rounded-lg p-6 text-left mb-8 border border-[#eee] w-full">
+                    <p className="text-[1.05rem] text-negro-txt/80 mb-3 flex justify-between items-center gap-4 border-b border-[#eee] pb-2 last:border-0 last:pb-0 font-medium">
+                      <strong className="text-negro-txt min-w-25 shrink-0">📚 Materia:</strong> {mentorActivo.materia}
                     </p>
-                    <p className="text-[1.05rem] text-[#333] mb-3 flex justify-between items-center gap-4 border-b border-[#eee] pb-2 last:border-0 last:pb-0 font-medium">
-                      <strong className="min-w-25 shrink-0">✉️ Correo:</strong> {mentorActivo.email}
+                    <p className="text-[1.05rem] text-negro-txt/80 mb-3 flex justify-between items-center gap-4 border-b border-[#eee] pb-2 last:border-0 last:pb-0 font-medium">
+                      <strong className="text-negro-txt min-w-25 shrink-0">✉️ Correo:</strong> {mentorActivo.email}
                     </p>
-                    <p className="text-[1.05rem] text-[#333] flex justify-between items-center gap-4 font-medium">
-                      <strong className="min-w-25 shrink-0">📱 WhatsApp:</strong> {mentorActivo.whatsapp}
+                    <p className="text-[1.05rem] text-negro-txt/80 flex justify-between items-center gap-4 font-medium">
+                      <strong className="text-negro-txt min-w-25 shrink-0">📱 WhatsApp:</strong> {mentorActivo.whatsapp}
                     </p>
                   </div>
                   <button className="bg-[#25D366] text-white rounded-lg py-4 px-12 text-[1.1rem] font-bold cursor-pointer w-full transition-all duration-300 shadow-md hover:bg-[#128C7E] hover:-translate-y-0.5 hover:shadow-lg" onClick={() => window.open(`https://wa.me/${mentorActivo.whatsapp.replace(/\D/g,'')}`, '_blank')}>
@@ -132,7 +132,7 @@ export default function Mentores() {
                   </button>
                 </div>
               </div>
-            </div>
+            </modal>
           </div>
         )}
 

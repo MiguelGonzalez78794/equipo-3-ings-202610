@@ -93,7 +93,7 @@ export default function QuickAccessGrid({ onNavigate, onSearch }) {
     <section className="px-5 pt-4 pb-6">
       {/* Encabezado + buscador */}
       <div className="flex items-center justify-between gap-3 flex-wrap mb-1">
-        <h2 className="text-lg font-bold text-gray-900">Accesos Rápidos</h2>
+        <h2 className="text-lg font-bold text-negro-txt">Accesos Rápidos</h2>
         <div className="flex items-center border-2 border-gray-200 rounded-lg overflow-hidden bg-white">
           <input
             type="text"
@@ -114,7 +114,7 @@ export default function QuickAccessGrid({ onNavigate, onSearch }) {
         </div>
       </div>
 
-      <p className="text-xs text-gray-500 mb-4">
+      <p className="text-xs text-negro-txt mb-4">
         Aqui puedes encontrar accesos rapidos al aplicativo
       </p>
 

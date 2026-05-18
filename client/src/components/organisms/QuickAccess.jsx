@@ -90,15 +90,15 @@ export default function QuickAccessGrid({ onNavigate, onSearch }) {
   };
 
   return (
-    <section className="pt-4 pb-6">
+    <section className="px-5 pt-4 pb-6">
       {/* Encabezado + buscador */}
       <div className="flex items-center justify-between gap-3 flex-wrap mb-1">
         <h2 className="text-lg font-bold text-negro-txt">Accesos Rápidos</h2>
         <div className="flex items-center border-2 border-gray-200 rounded-lg overflow-hidden bg-white">
           <input
             type="text"
-            placeholder="Buscar..."
-            className="outline-none px-3 py-1.5 text-sm text-gray-600 w-28"
+            placeholder="Escribe algo para buscar...."
+            className="outline-none px-3 py-1.5 text-sm text-gray-600 w-44"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && handleSearch()}
@@ -119,8 +119,8 @@ export default function QuickAccessGrid({ onNavigate, onSearch }) {
       </p>
 
        {/* Grid 3×2 */}
-       <div className="w-full">
-        <div className="grid grid-cols-3 gap-3 w-full">
+       <div className="flex flex-col items-center gap-3">
+        <div className="grid grid-cols-3 gap-12">
           {QUICK_ITEMS.map((item) => (
             <QuickAccessItem key={item.id} {...item} onClick={() => navigate(item.path)} />
           ))}

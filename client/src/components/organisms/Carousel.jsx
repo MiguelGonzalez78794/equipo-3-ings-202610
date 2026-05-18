@@ -26,7 +26,7 @@ const DEFAULT_NEWS = [
 
 export default function NewsCarousel({ items = DEFAULT_NEWS }) {
   return (
-    <section className="pt-6 pb-2">
+    <section className="px-5 pt-6 pb-2">
       <h2 className="text-lg font-bold text-negro-txt mb-4">Novedades - Noticias</h2>
       <div
         className="flex gap-3 overflow-x-auto pb-2"

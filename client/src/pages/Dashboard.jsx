@@ -12,7 +12,7 @@ export default function Dashboard({ onNavigate, onSearch }) {
     <div >
       <Header />
       {/* Header */}
-      <main className="px-4 pt-5 pb-8 animate-[fadeIn_0.5s_ease-out]">
+      <main className=" px-8 pt-7 border-gray-200 animate-[fadeIn_0.5s_ease-out] py-8">
         <div >
           <h1 className="text-xl font-bold text-negro-txt mb-1">
             Bienvenido al Asistente General Estudiantil

@@ -14,19 +14,19 @@ const Landing = () => {
             <div className="flex flex-col gap-8">
               <div className="text-center">
                 {/* Título */}
-                <h1 className="text-2xl font-bold text-gray-900 tracking-tight mb-4">
+                <h1 className="text-2xl font-bold text-negro-txt tracking-tight mb-4">
                   Asistente General Estudiantil (AGE)
                 </h1>
 
                 {/* Divisor decorativo */}
-                <div className="w-12 h-0.5 bg-gray-400 mx-auto mb-5 rounded-full" />
+                <div className="w-12 h-0.5 bg-negro-txt mx-auto mb-5 rounded-full" />
 
                 {/* Mensaje */}
                 <div className="space-y-1.5">
-                  <p className="text-base font-semibold text-gray-800">
+                  <p className="text-base font-semibold text-negro-txt/80">
                     ¡Sea bienvenido al Asistente General Estudiantil de la UPB!
                   </p>
-                  <p className="text-sm text-gray-500">
+                  <p className="text-sm text-negro-txt/80">
                     El primer ayudante general para estudiantes.
                   </p>
                 </div>

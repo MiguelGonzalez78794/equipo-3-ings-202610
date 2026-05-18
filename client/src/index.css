@@ -17,14 +17,14 @@
 }
 
 /* Header config */
-.header-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+header {
+  background-color: var(--bg-runtime, var(--color-blanco-bg));
   width: 100%;
 }
 
-
+nav, search, form, option, modal, section {
+  background-color: var(--bg-runtime, var(--color-blanco-bg));
+}
 
 body {
   margin: 0;
@@ -35,4 +35,3 @@ body {
   background-color: var(--bg-runtime, var(--color-blanco-bg));
   font-size: var(--font-size-base);
 }
-

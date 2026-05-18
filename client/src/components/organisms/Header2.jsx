@@ -16,8 +16,8 @@ const Header2 = () => {
 
 
   return (
-    <header className="sticky top-0 z-50 bg-blanco-bg border-b border-negro-txt px-2 md:px-4 py-2 md:py-4 w-full">
-      <div className="flex items-center justify-between w-full h-14 md:h-16">
+    <header className="sticky top-0 z-50 border-b border-negro-txt px-2 md:px-4 py-2 md:py-4 w-full">
+      <div className="flex items-center justify-between w-full h-14 md:h-16 mx-4">
 
         {/* Left: UPB Logo */}
           
@@ -29,7 +29,7 @@ const Header2 = () => {
           />
 
         {/* Right: Buttons (Perfil and Menú) */}
-        <div className="flex items-center gap-2 px-1 mr-2 md:mr-4">
+        <div className="flex items-center px-1 mr-2 md:mr-4">
           <AccessButton />
           <Button
             text="Perfil"

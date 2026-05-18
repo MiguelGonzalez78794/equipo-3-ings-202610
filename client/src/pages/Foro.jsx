@@ -69,8 +69,8 @@ const handleEliminarRespuesta = async (respuestaId) => {
       <div className="px-10 py-10">
         <div className="flex items-start gap-4 mb-6">
           <div className="flex-1">
-            <h2 className="text-2xl font-bold mb-2">Bienvenido al Foro comunitario</h2>
-            <p className="text-sm text-gray-600">
+            <h2 className="text-2xl font-bold text-negro-txt mb-2">Bienvenido al Foro comunitario</h2>
+            <p className="text-sm text-negro-txt">
               Aquí podrás publicar dudas generales que tengas para que la comunidad UPB te responda.
             </p>
           </div>
@@ -90,8 +90,8 @@ const handleEliminarRespuesta = async (respuestaId) => {
 
         {/* Reminder section */}
         <div className="mb-6">
-          <h3 className="text-xl font-bold mb-2">Recuerda que....</h3>
-          <p className="text-sm text-gray-600">
+          <h3 className="text-xl font-bold text-negro-txt mb-2">Recuerda que....</h3>
+          <p className="text-sm text-negro-txt">
             Ante toda duda puedes también utilizar el medio de preguntas frecuentes en el cual puedes preguntar directamente a la asesoría integral
           </p>
         </div>
@@ -103,14 +103,14 @@ const handleEliminarRespuesta = async (respuestaId) => {
             onChange={(e) => setTitulo(e.target.value)}
             placeholder="Título de tu pregunta"
             required
-            className="px-3 py-2 border border-gray-300 rounded-lg text-sm outline-none"
+            className="px-3 py-2 border border-gray-300 rounded-lg text-sm text-negro-txt outline-none"
           />
           <textarea
             value={contenido}
             onChange={(e) => setContenido(e.target.value)}
             placeholder="Describe tu duda..."
             required
-            className="px-3 py-2 border border-gray-300 rounded-lg text-sm outline-none min-h-[80px] resize-y"
+            className="px-3 py-2 border border-gray-300 rounded-lg text-sm outline-none text-negro-txt min-h-20 resize-y"
           />
           <button
             type="submit"
@@ -138,7 +138,7 @@ const handleEliminarRespuesta = async (respuestaId) => {
                     </p>
                     <button
                       onClick={() => handleVerPost(p)}
-                      className="px-4 py-1 bg-gray-900 text-white text-xs font-medium rounded-full hover:bg-gray-700 transition"
+                      className="px-4 py-1 bg-gray-900 text-white text-xs font-medium rounded-full hover:bg-gray-700 transition cursor-pointer"
                     >
                       Responder
                     </button>

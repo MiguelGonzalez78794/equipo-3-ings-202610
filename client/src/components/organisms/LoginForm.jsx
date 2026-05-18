@@ -25,34 +25,34 @@ export default function LoginForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-full max-w-95 p-8 rounded-xl border border-gray-200 bg-white">
-    <h2 className="m-0 text-[1.4rem] font-medium text-[#111]">Iniciar Sesión</h2>
+    <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-full max-w-95 p-8 rounded-xl border border-gray-200 bg-blanco-bg">
+    <h2 className="m-0 text-[1.4rem] font-medium text-negro-txt">Iniciar Sesión</h2>
 
     {error && (
-      <p className="text-[#c0392b] text-[13px] m-0 px-2.5 py-2 bg-[#fdecea] rounded-md">
+      <p className="text-[#c0392b] text-[0.8125rem] m-0 px-2.5 py-2 bg-blanco-bg rounded-md">
         {error}
       </p>
     )}
 
     <div className="flex flex-col gap-1.5">
-      <label className="text-sm text-[#555]">Correo</label>
+      <label className="text-sm text-negro-txt/60">Correo</label>
       <input
         type="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        className="px-3 py-2.5 rounded-lg border border-gray-300 text-[15px] outline-none"
+        className="px-3 py-2.5 rounded-lg border border-gray-300 placeholder-negro-txt/60 text-[0.9375rem] outline-none"
         placeholder="correo@upb.edu.co"
         required
       />
     </div>
 
     <div className="flex flex-col gap-1.5">
-      <label className="text-sm text-[#555]">Contraseña</label>
+      <label className="text-sm text-negro-txt/60">Contraseña</label>
       <input
         type="password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
-        className="px-3 py-2.5 rounded-lg border border-gray-300 text-[15px] outline-none"
+        className="px-3 py-2.5 rounded-lg border border-gray-300 placeholder-negro-txt/60 text-[0.9375rem] outline-none"
         placeholder="••••••••"
         required
       />
@@ -60,11 +60,11 @@ export default function LoginForm() {
 
     <Button type="submit" text={loading ? "Ingresando..." : "Entrar"} disabled={loading} />
 
-    <p className="text-[13px] text-center text-[#888] m-0">
+    <p className="text-[0.8125rem] text-center text-negro-txt/70 m-0">
       ¿No tienes cuenta?{" "}
       <span
         onClick={() => navigate("/register")}
-        className="text-[#111] font-medium cursor-pointer underline"
+        className="text-negro-txt font-medium cursor-pointer underline"
       >
         Regístrate
       </span>

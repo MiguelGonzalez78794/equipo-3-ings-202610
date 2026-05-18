@@ -40,7 +40,7 @@ const Buscar = () => {
         <div className="max-w-9/10 mx-auto">
           {/* Header Section */}
           <div className="mb-10">
-            <h1 className="text-4xl font-bold text-gray-900 mb-2">
+            <h1 className="text-4xl font-bold text-negro-txt mb-2">
               Sección de Busquedas
             </h1>
           </div>
@@ -56,9 +56,9 @@ const Buscar = () => {
           {/* Results Section */}
           <div className="space-y-4">
             {query.trim() === '' ? (
-              <div className="text-center py-20 text-gray-400">
+              <div className="text-center py-20 text-negro-txt">
                 <svg
-                  className="mx-auto h-12 w-12 text-gray-300"
+                  className="mx-auto h-12 w-12 text-negro-txt"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -78,10 +78,10 @@ const Buscar = () => {
                 <div
                   key={index}
                   onClick={() => navigate(result.path)}
-                  className="group bg-white p-6 rounded-sm border border-gray-200 shadow-sm hover:shadow-md hover:border-azul-url cursor-pointer transition-all duration-200"
+                  className="group p-6 rounded-sm border border-gray-200 shadow-sm hover:shadow-md hover:border-azul-url cursor-pointer transition-all duration-200"
                 >
                   <div className="flex justify-between items-start">
-                    <h2 className="text-xl font-semibold text-gray-900 group-hover:text-azul-url transition-colors">
+                    <h2 className="text-xl font-semibold text-negro-txt group-hover:text-azul-url transition-colors">
                       {result.title}
                     </h2>
                     <span className="text-xs font-medium text-azul-url bg-blue-50 px-2 py-1 rounded-full">
@@ -93,10 +93,10 @@ const Buscar = () => {
                   </p>
                   <div className="mt-4 flex flex-wrap gap-2">
                     {result.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="text-[10px] uppercase tracking-wider font-bold text-griso-prf bg-gris-bg2 px-2 py-0.5 rounded"
-                      >
+                    <span
+                      key={tag}
+                      className="text-[0.625rem] uppercase tracking-wider font-bold text-griso-prf bg-gris-bg2 px-2 py-0.5 rounded"
+                    >
                         #{tag}
                       </span>
                     ))}
@@ -105,11 +105,11 @@ const Buscar = () => {
               ))
             ) : (
               
-                <div className="text-center py-20 rounded-sm border border-dashed border-gris-bg2">
-                  <p className="text-gray-500 text-lg">
+                <div className="text-center py-20 rounded-sm border border-dashed border-reg_bg2">
+                  <p className="text-negro-txt text-lg">
                     No encontramos resultados para "<strong>{query}</strong>"
                   </p>
-                  <p className="text-gray-400 text-sm mt-2">
+                  <p className="text-negro-txt text-sm mt-2">
                     Prueba con otras palabras clave o revisa la ortografía.
                   </p>
                 </div>

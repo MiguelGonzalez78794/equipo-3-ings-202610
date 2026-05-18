@@ -16,44 +16,66 @@ export default function ProfesoresPage() {
   }, []);
 
   return (
-    <div className="">
+    <div>
       <Header />
-      <main style={styles.container}>
-        <button onClick={() => navigate("/dashboard")} style={styles.back}>← Volver</button>
-        <h1 style={styles.title}>Profesores</h1>
-        {loading ? <p>Cargando...</p> : (
-          <div style={styles.grid}>
+
+      <main className="max-w-225 mx-auto p-8">
+        <button
+          onClick={() => navigate("/dashboard")}
+          className="mb-4 text-sm text-negro-txt/60 hover:text-negro-txt transition bg-transparent border-none cursor-pointer"
+        >
+          ← Volver
+        </button>
+
+        <h1 className="text-[1.8rem] font-medium mb-6 text-negro-txt">
+          Profesores
+        </h1>
+
+        {loading ? (
+          <p>Cargando...</p>
+        ) : (
+          <div className="grid grid-cols-[repeat(auto-fill,minmax(13.75rem,1fr))] gap-4">
             {profesores.map((p) => (
-              <div key={p.id} style={styles.card}>
-                <div style={styles.avatar}>{p.nombre.charAt(0)}</div>
-                <h3 style={styles.nombre}>{p.nombre}</h3>
-                <p style={styles.materia}>{p.materia}</p>
-                <p style={styles.facultad}>{p.facultad}</p>
-                <a href={`mailto:${p.email_institucional}`} style={styles.email}>
+              <section
+                key={p.id}
+                className="bg-blanco-bg border border-gray-200 rounded-xl p-6 flex flex-col items-center gap-1.5"
+              >
+                <div className="w-12 h-12 rounded-full bg-black border border-white text-blanco-bg flex items-center justify-center text-xl font-medium">
+                  {p.nombre.charAt(0)}
+                </div>
+
+                <h3 className="text-[0.9375rem] font-medium text-center text-negro-txt m-0">
+                  {p.nombre}
+                </h3>
+
+                <p className="text-[0.8125rem] text-negro-txt/60 m-0">
+                  {p.materia}
+                </p>
+
+                <p className="text-xs text-gray-400 m-0">
+                  {p.facultad}
+                </p>
+
+                <a
+                  href={`mailto:${p.email_institucional}`}
+                  className="text-xs text-blue-600 hover:underline"
+                >
                   {p.email_institucional}
                 </a>
-                {p.extension && <p style={styles.ext}>Ext. {p.extension}</p>}
-              </div>
+
+                {p.extension && (
+                  <p className="text-xs text-gray-400 m-0">
+                    Ext. {p.extension}
+                  </p>
+                )}
+              </section>
             ))}
           </div>
         )}
       </main>
+
       <Footer />
     </div>
-    
   );
 }
 
-const styles = {
-  container: { padding: "2rem", maxWidth: "900px", margin: "0 auto" },
-  back: { background: "none", border: "none", cursor: "pointer", fontSize: "14px", color: "#555", marginBottom: "1rem" },
-  title: { fontSize: "1.8rem", fontWeight: 500, marginBottom: "1.5rem" },
-  grid: { display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: "1rem" },
-  card: { backgroundColor: "#fff", border: "1px solid #e0e0e0", borderRadius: "12px", padding: "1.5rem", display: "flex", flexDirection: "column", alignItems: "center", gap: "6px" },
-  avatar: { width: "48px", height: "48px", borderRadius: "50%", backgroundColor: "#111", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "20px", fontWeight: 500 },
-  nombre: { fontSize: "15px", fontWeight: 500, textAlign: "center", margin: 0 },
-  materia: { fontSize: "13px", color: "#555", margin: 0 },
-  facultad: { fontSize: "12px", color: "#888", margin: 0 },
-  email: { fontSize: "12px", color: "#0066cc", margin: 0 },
-  ext: { fontSize: "12px", color: "#888", margin: 0 },
-};

@@ -1,5 +1,8 @@
 import { useEffect, useRef } from "react";
 import Button from "../atoms/Button"; 
+import { useNavigate } from "react-router-dom";
+import { logout } from "../../services/auth.service";
+
 const NAV_ITEMS = [
   { label: "Buscar",       route: "/buscar" },
   { label: "Perfil",       route: "/perfil" },
@@ -8,7 +11,7 @@ const NAV_ITEMS = [
   { label: "Dashboard",    route: "/dashboard" },
   { label: "FAQs",         route: "/faqs" },
   { label: "Profesores",   route: "/profesores" },
-  { label: "Mentores",    route: "/mentores" },
+  { label: "Mentores",     route: "/mentores" },
   { label: "Mapa",         route: "/mapa" },
 ];
  
@@ -22,7 +25,13 @@ const NAV_ITEMS = [
  */
 export default function SidebarNav({ isOpen, onClose, onNavigate }) {
   const sidebarRef = useRef(null);
- 
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+      await logout();
+      navigate("/LogOut");
+    };
+
   // Close on Escape key
   useEffect(() => {
     const handleKey = (e) => { if (e.key === "Escape") onClose(); };
@@ -55,9 +64,9 @@ export default function SidebarNav({ isOpen, onClose, onNavigate }) {
         aria-label="Menú principal"
         className={[
           "fixed top-0 right-0 z-52 h-full w-67.5",
-          "bg-blanco-bg border-l border-[#e8e0db]",
+          "border-l border-blanco-bg",
           "flex flex-col",
-          "shadow-[4px_0_32px_rgba(168,0,100,0.08)]",
+          "shadow-[0.25rem_0_2rem_rgba(168,0,100,0.08)]",
           "transition-transform duration-350 ease-in-out",
           isOpen ? "translate-x-0" : "translate-x-full",
         ].join(" ")}
@@ -83,7 +92,7 @@ export default function SidebarNav({ isOpen, onClose, onNavigate }) {
                 key={route}
                 style={{
                   opacity: isOpen ? 1 : 0,
-                  transform: isOpen ? "translateX(0)" : "translateX(-12px)",
+                  transform: isOpen ? "translateX(0)" : "translateX(-0.75rem)",
                   transition: `opacity 0.28s ${0.04 + i * 0.04}s,
                                transform 0.28s ${0.04 + i * 0.04}s`,
                 }}
@@ -93,8 +102,15 @@ export default function SidebarNav({ isOpen, onClose, onNavigate }) {
                   onClick={() => { onNavigate(route); onClose(); }}
                   variant="menu"
                 />
+
               </li>
+              
             ))}
+            <Button 
+                  text="Cerrar Sesión"
+                  onClick={handleLogout}
+                  variant="menu"
+                />
           </ul>
         </div>
       </nav>

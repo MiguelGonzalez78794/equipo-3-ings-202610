@@ -1,26 +1,29 @@
-import Button from "./Button"
-
+import Button from "./Button";
+import React,  {useState} from "react";
+import { useEffect } from "react";
 
 export default function SizeButton(){
-    function toggleTxtSize(action){
-        const current = parseFloat(getComputedStyle(document.documentElement)
-                .getPropertyValue('--font-size-base'));
+    const [scale, setScale] = useState(1);
+    useEffect(() => {
+        const saved = localStorage.getItem('font-scale');
+        if (saved) setScale(parseFloat(saved));
+    }, []);
 
-        const next = action === "increase" ? Math.min(current + 2, 24): Math.max(current - 2, 12);
-
-        document.documentElement.style.setProperty("--font-size-base", "${next}px");
-    }
+    useEffect(() => {
+        document.documentElement.style.fontSize = `${scale * 16}px`;
+        localStorage.setItem('font-scale', scale);
+    }, [scale]);
 
     return(
         <div>
             <Button 
                 text="A-"
-                onClick={() => toggleTxtSize("decrease")}
+                onClick={() => setScale(s => Math.max(0.875, s - 0.125))}
                 variant="secondary"
             />
             <Button 
                 text="A+"
-                onClick={() => toggleTxtSize("increase")}
+                onClick={() => setScale(s => Math.min(1.5, s + 0.125))}
                 variant="secondary"
             />
         </div>

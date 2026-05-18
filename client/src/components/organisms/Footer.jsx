@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-gris-bg2 px-4 md:px-8 py-8 md:py-5 flex flex-col md:flex-row items-center md:items-start text-center md:text-left justify-between gap-8 md:gap-6 w-full mx-auto">
+    <footer className="bg-gris-bg2 px-4 md:px-8 py-8 md:py-5 flex flex-col md:flex-row text-center md:text-left justify-between gap-8 md:gap-6 w-full mx-auto ">
 
       {/* Contact info */}
       <div className="w-full md:min-w-50">
@@ -34,6 +34,7 @@ const Footer = () => {
           <p className="text-sm text-gray-900">
             Nit UPB: 890.902.922-6.
           </p>
+          
           <p className="text-sm text-gray-900">
             Otorgado por el Ministerio de Educación Nacional.
           </p>

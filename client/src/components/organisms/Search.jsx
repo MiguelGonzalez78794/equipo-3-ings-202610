@@ -42,7 +42,7 @@ const SearchBar = ({
           {query && (
             <button
               onClick={() => setQuery("")}
-              className="flex items-center justify-center px-3 text-gray-400 hover:text-gray-600 transition-colors"
+              className="flex items-center justify-center px-3 text-griso-prf hover:text-negro-txt cursor-pointer transition-colors"
               aria-label="Limpiar búsqueda"
             >
               <svg
@@ -63,7 +63,7 @@ const SearchBar = ({
           {/* Search arrow button */}
           <button
             onClick={handleSearch}
-            className="flex items-center justify-center h-full border border-negro-txt rounded-sm bg-gris-bg2 hover:bg-gray-200 transition-colors rounded-r-sm px-8"
+            className="flex items-center justify-center h-full border border-negro-txt rounded-sm bg-gris-bg2 hover:bg-gray-200 transition-colors rounded-r-sm px-8 cursor-pointer"
             aria-label="Buscar"
           >
             <svg

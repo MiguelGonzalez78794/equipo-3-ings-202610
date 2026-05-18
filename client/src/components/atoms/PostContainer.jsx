@@ -9,7 +9,7 @@ const PostContent = ({ name, children }) => {
         <div className="w-9 h-9 rounded-full bg-gray-100 border border-gray-200 flex items-center justify-center overflow-hidden">
           <img src={UserIcon} alt="User Icon" className="w-full h-full object-cover" />
         </div>
-        <span className="text-[11px] text-gray-500 font-medium text-center leading-tight">
+        <span className="text-[0.75] text-gray-500 font-medium text-center leading-tight">
           {first}
           {rest.length > 0 && (
             <>

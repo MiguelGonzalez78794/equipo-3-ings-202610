@@ -49,6 +49,15 @@ Dentro de esta carpeta se encuentra el archivo `index.md`, que presenta una visi
 
 ---
 
+## Ejecutar en Android Studio
+
+### Requisitos previos (solo una vez)
+- Node.js instalado
+- Android Studio instalado con SDK configurado
+- Java JDK 17+
+
+---
+
 ## Equipo 
 
 **`equipo-3-ing-202610`**

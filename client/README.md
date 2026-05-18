@@ -78,6 +78,54 @@ The app will be available at `http://localhost:5173` by default.
 
 ---
 
+### 5. Correr los smoke tests
+
+Los smoke tests verifican que el login y logout funcionen correctamente.
+
+Agrega tus credenciales de prueba al archivo `.env`:
+
+```
+TEST_EMAIL=tu-correo@upb.edu.co
+TEST_PASSWORD=tu-contraseña
+```
+
+Luego ejecuta:
+
+```bash
+# Correr todos los tests
+npm test
+
+# Ver interfaz visual (útil para depurar)
+npm run test:ui
+
+# Abrir el reporte HTML con resultados detallados
+npm run test:report
+```
+
+Los tests cubren:
+- Login con credenciales válidas → redirige al dashboard
+- Login con credenciales inválidas → muestra error
+- Ruta protegida sin sesión → redirige al inicio
+- Cerrar sesión desde el menú → redirige a `/LogOut`
+- Dashboard tras logout → redirige al inicio
+
+---
+
+### 6. Pasos para abrir en Android Studio
+
+```bash
+# 1. Compilar el proyecto web dentro de client
+npm run build
+
+# 2. Sincronizar con Android
+npx cap sync android
+
+# 3. Abrir Android Studio
+npx cap open android
+```
+
+---
+
 ## How is the project organized? 🗂️
 
 ```

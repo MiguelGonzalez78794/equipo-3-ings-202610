@@ -119,8 +119,8 @@ export default function QuickAccessGrid({ onNavigate, onSearch }) {
       </p>
 
        {/* Grid 3×2 */}
-       <div className="flex flex-col items-center gap-3">
-        <div className="grid grid-cols-3 gap-12">
+       <div className="w-full">
+        <div className="grid grid-cols-3 gap-3 w-full">
           {QUICK_ITEMS.map((item) => (
             <QuickAccessItem key={item.id} {...item} onClick={() => navigate(item.path)} />
           ))}

@@ -1,4 +1,4 @@
-const GOOGLE_MAPS_API_KEY = "AIzaSyATwSlSSh2aoYCy2ohCuqy3axwvUIsJsJU"; 
+const GOOGLE_MAPS_API_KEY = import.meta.env.VITE_GOOGLE_API_KEY;
 const LIBRARIES = ["marker"];
 
 let loadPromise = null;

@@ -2,30 +2,52 @@ import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import Header from "../components/organisms/Header2"
 import Footer from "../components/organisms/Footer"
+import MapInfo from "../components/organisms/MapInfo";
 
 export default function Mapa() {
+  const [selectedPoi, setSelectedPoi] = useState(null);
   const navigate = useNavigate();
 
   return (
-    <div className=''>
-      <Header />
-      <main style={styles.container} className='relative'>
-        <button onClick={() => navigate("/dashboard")} style={styles.back}>← Volver</button>
-        <h1 style={styles.title}>Mapa del Campus UPB</h1>
-        <div style={styles.mapWrapper}>
-          <iframe
-            title="Mapa UPB Medellín"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.1!2d-75.5755!3d6.2006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4428dfb80fad05%3A0x42137cfcc7b53b56!2sUniversidad%20Pontificia%20Bolivariana!5e0!3m2!1ses!2sco!4v1"
-            width="100%"
-            height="500"
-            style={{ border: 0, borderRadius: "12px" }}
-            allowFullScreen
-            loading="lazy"
-          />
-        </div>
-      </main>
-      <Footer />
-    </div>    
+    <div>
+        <Header />
+        <main style={styles.container} className='relative min-w-9/10'>
+          <button onClick={() => navigate("/dashboard")} style={styles.back}>← Volver</button>
+          <h1 style={styles.title} classname="text-negro-txt">Mapa del Campus UPB</h1>
+          <div className="flex flex-col md:flex-row w-full">
+ 
+            {/* ── Map panel ─────────────────────────────────────────────────── */}
+            <div className="w-full md:flex-1 h-120 md:h-209">
+              <MapInfo onMarkerSelect={setSelectedPoi} />
+            </div>
+      
+            {/* ── Info panel ────────────────────────────────────────────────── */}
+            <aside className="w-full md:w-72 h-auto md:h-209 p-6 border-t md:border-t-0 md:border-l border-gray-200 ml-20 overflow-y-auto">
+              {selectedPoi ? (
+                <>
+                  <h2 className="text-lg text-negro-txt mb-2 font-bold">{selectedPoi.name}</h2>
+                  {selectedPoi.image && (
+                    <img
+                      src={selectedPoi.image}
+                      alt={selectedPoi.name}
+                      className="w-full h-40 object-cover rounded-lg mb-3"
+                    />
+                  )}
+                  <p className="text-sm text-negro-txt mb-3">{selectedPoi.description}</p>
+                  <small className="text-xs text-gray-400">
+                    {selectedPoi.position.lat.toFixed(6)},{" "}
+                    {selectedPoi.position.lng.toFixed(6)}
+                  </small>
+                </>
+              ) : (
+                <p className="text-sm text-negro-txt">Selecciona un marcador para conocer los detalles</p>
+              )}
+            </aside>
+      
+          </div>
+        </main>
+        <Footer />
+    </div>
   );
 }
 

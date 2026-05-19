@@ -22,6 +22,11 @@ const ThreadModal = ({ post, answers, onClose, onRespond, respuesta, setRespuest
             <p className="text-sm font-medium text-negro-txt leading-snug">
               {post.question}
             </p>
+            {post.contenido && (
+              <p className="text-sm text-negro-txt/80 mt-1 leading-snug">
+                {post.contenido}
+              </p>
+            )}
             <p className="text-[0.6875rem] text-negro-txt/80 mt-1">{post.meta}</p>
           </PostContent>
         </modal>
